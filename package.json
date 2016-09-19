@@ -1,7 +1,8 @@
 {
   "name": "flex-grid-lists",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
+  "author": "Alejandro Riedel <ariedel@digbang.com>",
+  "license": "MIT",
   "devDependencies": {
     "gulp-sourcemaps": "~1.6.0",
     "gulp-sass": "~2.3.2",
