@@ -1,9 +1,12 @@
 .list-row {
   box-sizing: border-box;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: $fgl-gutter-width / -2;
+  margin-right: $fgl-gutter-width / -2;
 
   .list-card {
+    padding-left: $fgl-gutter-width / 2;
+    padding-right: $fgl-gutter-width / 2;
+
     @include make-list-card(#{'.list-card'});
   }
 }

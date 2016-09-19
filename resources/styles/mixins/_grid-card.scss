@@ -20,12 +20,12 @@
   }
 }
 
-@mixin make-grid-card-col($size, $columns: $flex-grid-lists-columns) {
+@mixin make-grid-card-col($size, $columns: $fgl-columns) {
   @include flex-basis(percentage($size / $columns));
   min-width: percentage($size / $columns);
 }
 
-@mixin make-grid-columns($columns: $flex-grid-lists-columns, $breakpoints: $flex-grid-lists-breakpoints) {
+@mixin make-grid-columns($columns: $fgl-columns, $breakpoints: $fgl-breakpoints) {
 
   $breakpoint-counter: 0;
   @each $breakpoint in map-keys($breakpoints) {
