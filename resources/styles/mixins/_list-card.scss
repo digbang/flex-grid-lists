@@ -1,0 +1,42 @@
+@mixin make-list-card($root) {
+  @include flexbox();
+  @include flex(1, 1, auto);
+  @include flex-direction(row);
+  @include align-items(stretch);
+  @include flex-wrap(wrap);
+
+  @include media-breakpoint-up(sm) {
+    @include flex-wrap(nowrap);
+  }
+
+  #{$root} {
+    &__header {
+      display: block;
+      @include flex(1);
+      width: 100px;
+      max-width: 100px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+
+    &__body {
+      display: block;
+      @include flex(1);
+    }
+
+    &__footer {
+      display: block;
+      @include flex(1);
+      width: 100%;
+      max-width: 100%;
+      @include align-self(center);
+      @include flex-basis(100%);
+
+      @include media-breakpoint-up(sm) {
+        @include flex-basis(auto);
+        width: 100px;
+        max-width: 100px;
+      }
+    }
+  }
+}

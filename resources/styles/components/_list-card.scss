@@ -1,0 +1,33 @@
+.list-card {
+  $root: &;
+
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 25px;
+
+  &__header {
+    display: none;
+  }
+
+  &__body {
+    display: none;
+
+    h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+  }
+
+  &__footer {
+    display: none;
+  }
+
+  &--grid {
+    @include make-grid-card($root);
+  }
+
+  &--list {
+    @include make-list-card($root);
+  }
+}

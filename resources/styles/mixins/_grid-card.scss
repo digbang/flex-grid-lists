@@ -1,0 +1,52 @@
+@mixin make-grid-card($root) {
+  box-sizing: border-box;
+  @include flexbox();
+  @include flex-direction(column);
+
+  #{$root} {
+
+    &__header {
+      display: block;
+    }
+
+    &__body {
+      display: block;
+    }
+
+    &__footer {
+      display: block;
+      margin-top: auto;
+    }
+  }
+}
+
+@mixin make-grid-card-col($size, $columns: $flex-grid-lists-columns) {
+  @include flex-basis(percentage($size / $columns));
+  min-width: percentage($size / $columns);
+}
+
+@mixin make-grid-columns($columns: $flex-grid-lists-columns, $breakpoints: $flex-grid-lists-breakpoints) {
+
+  $breakpoint-counter: 0;
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-counter: ($breakpoint-counter + 1);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      .grid-#{$breakpoint} {
+        position: relative;
+        @include flex-grow(1);
+        @include flex-shrink(0);
+        @include flex-basis(0);
+        max-width: 100%;
+        min-height: 1px;
+      }
+
+      @for $i from 1 through $columns {
+        .grid-#{$breakpoint}-#{$i} {
+          @include make-grid-card-col($i, $columns);
+        }
+      }
+    }
+  }
+}

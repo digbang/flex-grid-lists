@@ -1,0 +1,9 @@
+.list-row {
+  box-sizing: border-box;
+  margin-left: -10px;
+  margin-right: -10px;
+
+  .list-card {
+    @include make-list-card(#{'.list-card'});
+  }
+}
