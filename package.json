@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "author": "Alejandro Riedel <ariedel@digbang.com>",
   "license": "MIT",
+  "repository": "digbang/flex-grid-lists",
   "devDependencies": {
-    "gulp-sourcemaps": "~1.6.0",
-    "gulp-sass": "~2.3.2",
-    "sass-flex-mixin": "~1.0.3",
-    "gulp-rename": "~1.2.2",
+    "gulp": "^3.9.1",
     "gulp-clean-css": "~2.0.12",
-    "gulp-combine-mq": "~0.4.0"
+    "gulp-combine-mq": "~0.4.0",
+    "gulp-rename": "~1.2.2",
+    "gulp-sass": "~2.3.2",
+    "gulp-sourcemaps": "~1.6.0",
+    "sass-flex-mixin": "~1.0.3"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
