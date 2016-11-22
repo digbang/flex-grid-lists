@@ -21,8 +21,9 @@
 }
 
 @mixin make-grid-card-col($size, $columns: $fgl-columns) {
-  @include flex-basis(100%);
-  max-width: percentage($size / $columns);
+  @include flex-basis(percentage($size / $columns));
+  width: percentage($size / $columns);
+  max-width: percentage($size / $columns); // old ie
 }
 
 @mixin make-grid-columns($columns: $fgl-columns, $breakpoints: $fgl-breakpoints) {
